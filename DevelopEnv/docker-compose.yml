@@ -1,0 +1,11 @@
+version: '3'
+services: 
+    djangodev:
+        build: 
+            context: .
+            dockerfile: ./Dockerfile
+        volumes: 
+            - ../locallibrary:/home/app
+        ports: 
+            - "8000:8000"
+        command: sleep infinity
